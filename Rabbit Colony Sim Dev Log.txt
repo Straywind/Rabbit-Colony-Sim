@@ -1,0 +1,36 @@
+﻿Rabbit Colony Sim is a program that utilizes linked lists. The simulation is a linked list of
+bunnies each with the following data:
+  Sex: Male, Female (random at creation 50/50)
+  color: white, brown, black, spotted (random at creation 25/25/25/25)
+  age : 0
+  Name : randomly chosen at creation from a list of bunny names.
+  radioactiveVampireMutantNinjaBunny: true/false (decided at time of bunny creation 2% chance of true)
+
+At program initialization 5 bunnies are created.
+The program outputs each turns events.
+The program prints a list of all the bunnies in the colony each turn along w/ all the bunnies details
+Each loop iteration ages the bunnies 1 year.
+So long as there is at least one male age 2 or older, for each female bunny in the list age 2 or older;
+	A new bunny is created each turn. (i.e. if there was 1 adult male and 3 adult female bunnies, three new bunnies would be born each turn)
+	New bunnies born are the same color as their mother.
+If a bunny becomes older than 10 years old, it dies.
+
+If a radioactive mutant vampire bunny is born then each turn it will change exactly one non radioactive bunny into a radioactive vampire bunny.
+	If there are two radioactive mutant vampire bunnies two bunnies will be changed each turn and so on...)
+	Radioactive vampire bunnies are excluded from regular breeding and do not count as adult bunnies
+	Radioactive vampire bunnies do not die until they reach age 50.
+
+When all the bunnies have died the program terminates.
+If the bunny population exceeds 100 a food shortage occurs killing half of the bunnies (randomly chosen)
+All console output is written to a .txt file.
+The program runs in real time, with each turn lasting 2 seconds, and a one second pause between each announement.
+User is asked at each turn whether or not they wish to initiate a bunny culling. If yes, colony will be culled.
+
+///Added grid
+Modified the program to place the rabits in a 20x20 grid. The rabbits move one space each turn randomly.
+	Juvenile males are marked 'm', adults are marked 'M'.
+	Juvenile females are marked 'f', adults are marked 'F'.
+	Radioactive buniies are marked 'X' regardless of age or gender.
+
+Modified the program so that radioactive mutant vampire bunnies only convert bunnies that end a turn on an adjacent square. They will convert bunnies on ALL adjacent squares each turn.
+Modified the program so that new babies are born in an empty adjacent square next to the mother bunny. If no empty square exits then the baby bunny isn't born.
